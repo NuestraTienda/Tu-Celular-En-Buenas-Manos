@@ -16,43 +16,52 @@
     .screen.active { display: block; }
 
     /* Header */
-    .header {
-      text-align: center;
-      padding: 20px 0 12px;
-    }
+    .header { text-align: center; padding: 20px 0 12px; }
     .header h1 { font-size: 1.4rem; font-weight: 700; color: #fff; }
     .header p { font-size: 0.85rem; color: #a1a1aa; margin-top: 4px; }
 
-    /* Search */
-    .search-wrap {
+    /* Top bar: Servicios + Search */
+    .top-bar {
       position: sticky; top: 0; z-index: 10;
       background: #0f0f14;
       padding: 12px 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
-    .search-wrap input {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 12px;
+    .btn-servicios {
+      flex-shrink: 0;
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn-servicios:hover { background: #4f46e5; }
+    .top-bar input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 10px;
       border: 1px solid #27272a;
       background: #18181b;
       color: #fff;
-      font-size: 1rem;
+      font-size: 0.95rem;
       outline: none;
       transition: border-color .2s;
     }
-    .search-wrap input:focus { border-color: #6366f1; }
-    .search-wrap input::placeholder { color: #71717a; }
+    .top-bar input:focus { border-color: #6366f1; }
+    .top-bar input::placeholder { color: #71717a; }
 
     /* Brand group */
     .brand-group { margin-bottom: 20px; }
     .brand-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #6366f1;
-      margin-bottom: 8px;
-      padding-left: 4px;
+      font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: #6366f1; margin-bottom: 8px; padding-left: 4px;
     }
 
     /* Grid */
@@ -69,7 +78,6 @@
       text-align: center;
       cursor: pointer;
       transition: all .15s;
-      position: relative;
     }
     .grid-item:hover { border-color: #6366f1; background: #1c1c22; transform: translateY(-1px); }
     .grid-item:active { transform: scale(0.97); }
@@ -158,20 +166,26 @@
     .back-btn:hover { border-color: #6366f1; color: #fff; }
 
     /* Breadcrumb */
-    .breadcrumb {
-      font-size: 0.8rem;
-      color: #71717a;
-      margin-bottom: 16px;
-    }
+    .breadcrumb { font-size: 0.8rem; color: #71717a; margin-bottom: 16px; }
     .breadcrumb span { color: #e4e4e7; font-weight: 500; }
 
-    /* No results */
-    .no-results {
-      text-align: center;
-      padding: 40px 20px;
-      color: #71717a;
-      font-size: 0.9rem;
+    /* Services screen */
+    .service-card {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
     }
+    .service-name { font-size: 0.9rem; font-weight: 500; flex: 1; }
+    .service-price { font-size: 1rem; font-weight: 700; color: #4ade80; white-space: nowrap; }
+    .services-list { display: flex; flex-direction: column; gap: 10px; }
+
+    /* No results */
+    .no-results { text-align: center; padding: 40px 20px; color: #71717a; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -182,8 +196,9 @@
       <h1>🔧 Catálogo de Reparaciones</h1>
       <p>Elegí tu modelo de celular</p>
     </div>
-    <div class="search-wrap">
-      <input type="text" id="search" placeholder="Buscar modelo... (ej: iPhone 15, Galaxy S24)" autocomplete="off">
+    <div class="top-bar">
+      <button class="btn-servicios" onclick="showScreen(4)">Servicios</button>
+      <input type="text" id="search" placeholder="Buscar modelo..." autocomplete="off">
     </div>
     <div id="phone-grid"></div>
     <div id="no-results" class="no-results" style="display:none">No se encontraron modelos. Probá con otro nombre.</div>
@@ -213,42 +228,50 @@
     <div id="comp-list" class="comp-list"></div>
     <div class="diag-section">
       <a id="diag-link" class="diag-btn" href="#" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2h-2zm0-4V7h2v6h-2z"/></svg>
-        No sé qué tiene mi dispositivo → Pedir diagnóstico
+        ⚠️ No sé qué tiene mi dispositivo → Pedir diagnóstico
       </a>
     </div>
+  </div>
+
+  <!-- PANTALLA 4: Servicios -->
+  <div id="screen4" class="screen">
+    <button class="back-btn" onclick="showScreen(1)">← Volver</button>
+    <div class="header">
+      <h1>Precio de servicio de mantenimiento</h1>
+      <p>Consultá por WhatsApp para agendar</p>
+    </div>
+    <div id="services-list" class="services-list"></div>
   </div>
 
   <script>
     // ====== CONFIG ======
     const MSG_DIAGNOSTICO = "Hola, no sé qué es lo que tiene mi dispositivo, puedo explicarle qué le pasó y así hacer un diagnóstico?";
     const MSG_COTIZACION = (componente, modelo) => `Hola, quiero reparar este ${componente} de mi ${modelo}, ¿cuál sería el precio?`;
+    const MSG_SERVICIO = (servicio) => `Hola, quiero agendar el servicio de: ${servicio}`;
     // ====================
 
     let DATA = null;
     let selectedPhone = null;
     let selectedCategory = null;
 
-    // Load data
     fetch('data.json')
       .then(r => r.json())
-      .then(d => { DATA = d; renderPhones(); })
+      .then(d => { DATA = d; renderPhones(); renderServices(); })
       .catch(err => {
-        document.getElementById('phone-grid').innerHTML = '<p style="color:#ef4444">Error al cargar data.json. Verificá que el archivo esté en la misma carpeta.</p>';
+        document.getElementById('phone-grid').innerHTML = '<p style="color:#ef4444">Error al cargar data.json.</p>';
       });
 
     function waLink(msg) {
       return `https://wa.me/${DATA.whatsapp_number}?text=${encodeURIComponent(msg)}`;
     }
 
-    // ====== NAVIGATION ======
     function showScreen(n) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
       document.getElementById(`screen${n}`).classList.add('active');
       window.scrollTo(0, 0);
     }
 
-    // ====== PANTALLA 1: Phones ======
+    // ====== PANTALLA 1 ======
     function renderPhones(filter = '') {
       const container = document.getElementById('phone-grid');
       const noResults = document.getElementById('no-results');
@@ -274,10 +297,7 @@
         phones.forEach(p => {
           const item = document.createElement('div');
           item.className = 'grid-item';
-          item.innerHTML = `
-            <div class="phone-img">📱</div>
-            <div class="phone-name">${p.name}</div>
-          `;
+          item.innerHTML = `<div class="phone-img">📱</div><div class="phone-name">${p.name}</div>`;
           item.onclick = () => selectPhone(p);
           grid.appendChild(item);
         });
@@ -290,7 +310,7 @@
       renderPhones(e.target.value.trim());
     });
 
-    // ====== PANTALLA 2: Categories ======
+    // ====== PANTALLA 2 ======
     function selectPhone(phone) {
       selectedPhone = phone;
       document.getElementById('s2-phone-name').textContent = phone.name;
@@ -304,16 +324,13 @@
       DATA.categories.forEach(cat => {
         const item = document.createElement('div');
         item.className = 'grid-item';
-        item.innerHTML = `
-          <div class="cat-img">[ imagen ]</div>
-          <div class="cat-name">${cat.name}</div>
-        `;
+        item.innerHTML = `<div class="cat-img">[ imagen ]</div><div class="cat-name">${cat.name}</div>`;
         item.onclick = () => selectCategory(cat);
         grid.appendChild(item);
       });
     }
 
-    // ====== PANTALLA 3: Components ======
+    // ====== PANTALLA 3 ======
     function selectCategory(cat) {
       selectedCategory = cat;
       document.getElementById('s3-phone-name').textContent = selectedPhone.name;
@@ -335,11 +352,28 @@
         list.appendChild(card);
       });
 
-      // Diagnostic button
-      const diagMsg = MSG_DIAGNOSTICO;
-      document.getElementById('diag-link').href = waLink(diagMsg);
-
+      document.getElementById('diag-link').href = waLink(MSG_DIAGNOSTICO);
       showScreen(3);
+    }
+
+    // ====== PANTALLA 4: Servicios ======
+    function renderServices() {
+      const list = document.getElementById('services-list');
+      list.innerHTML = '';
+      DATA.services.forEach(svc => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
+        const msg = MSG_SERVICIO(svc.name);
+        card.innerHTML = `
+          <div class="service-name">${svc.name}</div>
+          <div class="service-price">${svc.price}</div>
+          <a class="comp-btn" href="${waLink(msg)}" target="_blank" rel="noopener" style="flex-shrink:0">
+            <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar
+          </a>
+        `;
+        list.appendChild(card);
+      });
     }
   </script>
 </body>
