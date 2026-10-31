@@ -1,0 +1,266 @@
+
+---
+
+## `data.json`
+
+```json
+{
+  "whatsapp_number": "5493468542942",
+  "celulares": [
+    {"id":"iphone-18-pro-max","name":"iPhone 18 Pro Max","brand":"Apple"},
+    {"id":"iphone-18-pro","name":"iPhone 18 Pro","brand":"Apple"},
+    {"id":"iphone-17e","name":"iPhone 17e","brand":"Apple"},
+    {"id":"iphone-17-pro-max","name":"iPhone 17 Pro Max","brand":"Apple"},
+    {"id":"iphone-17-pro","name":"iPhone 17 Pro","brand":"Apple"},
+    {"id":"iphone-17-air","name":"iPhone 17 Air","brand":"Apple"},
+    {"id":"iphone-17","name":"iPhone 17","brand":"Apple"},
+    {"id":"iphone-16-pro-max","name":"iPhone 16 Pro Max","brand":"Apple"},
+    {"id":"iphone-16-pro","name":"iPhone 16 Pro","brand":"Apple"},
+    {"id":"iphone-16-plus","name":"iPhone 16 Plus","brand":"Apple"},
+    {"id":"iphone-16","name":"iPhone 16","brand":"Apple"},
+    {"id":"iphone-15-pro-max","name":"iPhone 15 Pro Max","brand":"Apple"},
+    {"id":"iphone-15-pro","name":"iPhone 15 Pro","brand":"Apple"},
+    {"id":"iphone-15-plus","name":"iPhone 15 Plus","brand":"Apple"},
+    {"id":"iphone-15","name":"iPhone 15","brand":"Apple"},
+    {"id":"iphone-14-pro-max","name":"iPhone 14 Pro Max","brand":"Apple"},
+    {"id":"iphone-14-pro","name":"iPhone 14 Pro","brand":"Apple"},
+    {"id":"iphone-14-plus","name":"iPhone 14 Plus","brand":"Apple"},
+    {"id":"iphone-14","name":"iPhone 14","brand":"Apple"},
+    {"id":"iphone-13-pro-max","name":"iPhone 13 Pro Max","brand":"Apple"},
+    {"id":"iphone-13-pro","name":"iPhone 13 Pro","brand":"Apple"},
+    {"id":"iphone-13","name":"iPhone 13","brand":"Apple"},
+    {"id":"iphone-13-mini","name":"iPhone 13 mini","brand":"Apple"},
+    {"id":"iphone-12-pro-max","name":"iPhone 12 Pro Max","brand":"Apple"},
+    {"id":"iphone-12-pro","name":"iPhone 12 Pro","brand":"Apple"},
+    {"id":"iphone-12","name":"iPhone 12","brand":"Apple"},
+    {"id":"iphone-12-mini","name":"iPhone 12 mini","brand":"Apple"},
+    {"id":"iphone-11","name":"iPhone 11","brand":"Apple"},
+    {"id":"iphone-se-2022","name":"iPhone SE (2022)","brand":"Apple"},
+    {"id":"iphone-se-2020","name":"iPhone SE (2020)","brand":"Apple"},
+
+    {"id":"galaxy-s26-ultra","name":"Galaxy S26 Ultra","brand":"Samsung"},
+    {"id":"galaxy-s26-plus","name":"Galaxy S26+","brand":"Samsung"},
+    {"id":"galaxy-s26","name":"Galaxy S26","brand":"Samsung"},
+    {"id":"galaxy-z-fold-8","name":"Galaxy Z Fold 8","brand":"Samsung"},
+    {"id":"galaxy-z-flip-8","name":"Galaxy Z Flip 8","brand":"Samsung"},
+    {"id":"galaxy-s25-ultra","name":"Galaxy S25 Ultra","brand":"Samsung"},
+    {"id":"galaxy-s25-plus","name":"Galaxy S25+","brand":"Samsung"},
+    {"id":"galaxy-s25","name":"Galaxy S25","brand":"Samsung"},
+    {"id":"galaxy-z-fold-7","name":"Galaxy Z Fold 7","brand":"Samsung"},
+    {"id":"galaxy-z-flip-7","name":"Galaxy Z Flip 7","brand":"Samsung"},
+    {"id":"galaxy-z-fold-6","name":"Galaxy Z Fold 6","brand":"Samsung"},
+    {"id":"galaxy-z-flip-6","name":"Galaxy Z Flip 6","brand":"Samsung"},
+    {"id":"galaxy-s24-ultra","name":"Galaxy S24 Ultra","brand":"Samsung"},
+    {"id":"galaxy-s24-plus","name":"Galaxy S24+","brand":"Samsung"},
+    {"id":"galaxy-s24","name":"Galaxy S24","brand":"Samsung"},
+    {"id":"galaxy-s23-ultra","name":"Galaxy S23 Ultra","brand":"Samsung"},
+    {"id":"galaxy-s23-plus","name":"Galaxy S23+","brand":"Samsung"},
+    {"id":"galaxy-s23","name":"Galaxy S23","brand":"Samsung"},
+    {"id":"galaxy-s22-ultra","name":"Galaxy S22 Ultra","brand":"Samsung"},
+    {"id":"galaxy-s22-plus","name":"Galaxy S22+","brand":"Samsung"},
+    {"id":"galaxy-s22","name":"Galaxy S22","brand":"Samsung"},
+    {"id":"galaxy-a57","name":"Galaxy A57","brand":"Samsung"},
+    {"id":"galaxy-a55","name":"Galaxy A55","brand":"Samsung"},
+    {"id":"galaxy-a54","name":"Galaxy A54","brand":"Samsung"},
+    {"id":"galaxy-a37","name":"Galaxy A37","brand":"Samsung"},
+    {"id":"galaxy-a35","name":"Galaxy A35","brand":"Samsung"},
+    {"id":"galaxy-a34","name":"Galaxy A34","brand":"Samsung"},
+    {"id":"galaxy-a25","name":"Galaxy A25","brand":"Samsung"},
+    {"id":"galaxy-a24","name":"Galaxy A24","brand":"Samsung"},
+    {"id":"galaxy-a16","name":"Galaxy A16","brand":"Samsung"},
+    {"id":"galaxy-a15","name":"Galaxy A15","brand":"Samsung"},
+    {"id":"galaxy-a14","name":"Galaxy A14","brand":"Samsung"},
+
+    {"id":"xiaomi-17-ultra","name":"Xiaomi 17 Ultra","brand":"Xiaomi"},
+    {"id":"xiaomi-15-pro","name":"Xiaomi 15 Pro","brand":"Xiaomi"},
+    {"id":"xiaomi-15","name":"Xiaomi 15","brand":"Xiaomi"},
+    {"id":"xiaomi-14-pro","name":"Xiaomi 14 Pro","brand":"Xiaomi"},
+    {"id":"xiaomi-14","name":"Xiaomi 14","brand":"Xiaomi"},
+    {"id":"xiaomi-13-pro","name":"Xiaomi 13 Pro","brand":"Xiaomi"},
+    {"id":"xiaomi-13","name":"Xiaomi 13","brand":"Xiaomi"},
+    {"id":"xiaomi-12-pro","name":"Xiaomi 12 Pro","brand":"Xiaomi"},
+    {"id":"xiaomi-12","name":"Xiaomi 12","brand":"Xiaomi"},
+    {"id":"redmi-note-14-pro","name":"Redmi Note 14 Pro","brand":"Xiaomi"},
+    {"id":"redmi-note-14","name":"Redmi Note 14","brand":"Xiaomi"},
+    {"id":"redmi-note-13-pro","name":"Redmi Note 13 Pro","brand":"Xiaomi"},
+    {"id":"redmi-note-13","name":"Redmi Note 13","brand":"Xiaomi"},
+    {"id":"redmi-note-12-pro","name":"Redmi Note 12 Pro","brand":"Xiaomi"},
+    {"id":"redmi-note-12","name":"Redmi Note 12","brand":"Xiaomi"},
+
+    {"id":"pixel-11-pro-xl","name":"Pixel 11 Pro XL","brand":"Google"},
+    {"id":"pixel-11-pro","name":"Pixel 11 Pro","brand":"Google"},
+    {"id":"pixel-11","name":"Pixel 11","brand":"Google"},
+    {"id":"pixel-10a","name":"Pixel 10a","brand":"Google"},
+    {"id":"pixel-10-pro-xl","name":"Pixel 10 Pro XL","brand":"Google"},
+    {"id":"pixel-10-pro","name":"Pixel 10 Pro","brand":"Google"},
+    {"id":"pixel-10","name":"Pixel 10","brand":"Google"},
+    {"id":"pixel-9-pro-xl","name":"Pixel 9 Pro XL","brand":"Google"},
+    {"id":"pixel-9-pro","name":"Pixel 9 Pro","brand":"Google"},
+    {"id":"pixel-9","name":"Pixel 9","brand":"Google"},
+    {"id":"pixel-8a","name":"Pixel 8a","brand":"Google"},
+    {"id":"pixel-8-pro","name":"Pixel 8 Pro","brand":"Google"},
+    {"id":"pixel-8","name":"Pixel 8","brand":"Google"},
+    {"id":"pixel-7-pro","name":"Pixel 7 Pro","brand":"Google"},
+    {"id":"pixel-7","name":"Pixel 7","brand":"Google"},
+    {"id":"pixel-7a","name":"Pixel 7a","brand":"Google"},
+    {"id":"pixel-6-pro","name":"Pixel 6 Pro","brand":"Google"},
+    {"id":"pixel-6","name":"Pixel 6","brand":"Google"},
+
+    {"id":"oneplus-15","name":"OnePlus 15","brand":"OnePlus"},
+    {"id":"oneplus-13","name":"OnePlus 13","brand":"OnePlus"},
+    {"id":"oneplus-12","name":"OnePlus 12","brand":"OnePlus"},
+    {"id":"oneplus-11","name":"OnePlus 11","brand":"OnePlus"},
+    {"id":"oneplus-nord-4","name":"OnePlus Nord 4","brand":"OnePlus"},
+    {"id":"oneplus-nord-3","name":"OnePlus Nord 3","brand":"OnePlus"},
+
+    {"id":"moto-edge-50-pro","name":"Motorola Edge 50 Pro","brand":"Motorola"},
+    {"id":"moto-edge-40-pro","name":"Motorola Edge 40 Pro","brand":"Motorola"},
+    {"id":"moto-edge-40","name":"Motorola Edge 40","brand":"Motorola"},
+    {"id":"moto-edge-30-pro","name":"Motorola Edge 30 Pro","brand":"Motorola"},
+    {"id":"moto-edge-30","name":"Motorola Edge 30","brand":"Motorola"},
+    {"id":"moto-g85","name":"Motorola G85","brand":"Motorola"},
+    {"id":"moto-g75","name":"Motorola G75","brand":"Motorola"},
+    {"id":"moto-g73","name":"Motorola G73","brand":"Motorola"},
+    {"id":"moto-g64","name":"Motorola G64","brand":"Motorola"},
+    {"id":"moto-g54","name":"Motorola G54","brand":"Motorola"},
+    {"id":"moto-g53","name":"Motorola G53","brand":"Motorola"},
+    {"id":"moto-g34","name":"Motorola G34","brand":"Motorola"},
+    {"id":"moto-g24","name":"Motorola G24","brand":"Motorola"},
+    {"id":"moto-razr-2026","name":"Motorola Razr 2026","brand":"Motorola"},
+    {"id":"moto-razr-plus-2026","name":"Motorola Razr Plus 2026","brand":"Motorola"},
+
+    {"id":"nothing-phone-3","name":"Nothing Phone (3)","brand":"Nothing"},
+    {"id":"nothing-phone-2","name":"Nothing Phone (2)","brand":"Nothing"},
+    {"id":"nothing-phone-2a","name":"Nothing Phone (2a)","brand":"Nothing"},
+    {"id":"nothing-phone-1","name":"Nothing Phone (1)","brand":"Nothing"},
+
+    {"id":"oppo-find-x7","name":"Oppo Find X7","brand":"Oppo"},
+    {"id":"oppo-find-x6-pro","name":"Oppo Find X6 Pro","brand":"Oppo"},
+    {"id":"oppo-reno-11","name":"Oppo Reno 11","brand":"Oppo"},
+    {"id":"oppo-reno-10","name":"Oppo Reno 10","brand":"Oppo"},
+
+    {"id":"vivo-x100-pro","name":"Vivo X100 Pro","brand":"Vivo"},
+    {"id":"vivo-x100","name":"Vivo X100","brand":"Vivo"},
+    {"id":"vivo-v30","name":"Vivo V30","brand":"Vivo"},
+    {"id":"vivo-v29","name":"Vivo V29","brand":"Vivo"},
+
+    {"id":"realme-gt-5","name":"Realme GT 5","brand":"Realme"},
+    {"id":"realme-gt-4","name":"Realme GT 4","brand":"Realme"},
+    {"id":"realme-12-pro","name":"Realme 12 Pro","brand":"Realme"},
+    {"id":"realme-12","name":"Realme 12","brand":"Realme"},
+    {"id":"realme-11-pro","name":"Realme 11 Pro","brand":"Realme"},
+    {"id":"realme-11","name":"Realme 11","brand":"Realme"}
+  ],
+  "categories": [
+    {
+      "id":"pantalla-display",
+      "name":"Pantalla / Display",
+      "components":[
+        "Pantalla completa (display + touch)",
+        "Panel OLED / LCD",
+        "Vidrio frontal (lens)",
+        "Cable flex de pantalla",
+        "Conector de pantalla",
+        "Digitizador (solo touch)"
+      ]
+    },
+    {
+      "id":"carga-energia",
+      "name":"Carga / Energía",
+      "components":[
+        "Puerto de carga (USB-C / Lightning)",
+        "Batería",
+        "Cable de carga interno",
+        "Circuito de carga (PMIC)",
+        "Inductor de carga inalámbrica",
+        "Botón de encendido (cable de carga)"
+      ]
+    },
+    {
+      "id":"botones-controles",
+      "name":"Botones / Controles",
+      "components":[
+        "Botón de encendido / Power",
+        "Botón de volumen arriba",
+        "Botón de volumen abajo",
+        "Botón lateral (Action / Mute)",
+        "Cable flex de botones",
+        "Botón de cámara (exterior)"
+      ]
+    },
+    {
+      "id":"audio",
+      "name":"Zona de Audio",
+      "components":[
+        "Altavoz principal",
+        "Altavoz secundario (estéreo)",
+        "Auricular (earpiece)",
+        "Micrófono principal",
+        "Micrófono secundario (reducción de ruido)",
+        "Cable flex de audio"
+      ]
+    },
+    {
+      "id":"camaras",
+      "name":"Zona de Cámaras",
+      "components":[
+        "Cámara principal (traspera)",
+        "Cámara ultra gran angular",
+        "Cámara telefoto",
+        "Cámara frontal (selfie)",
+        "Flash LED",
+        "Lente de cámara (solo lente)",
+        "Cable flex de cámara"
+      ]
+    },
+    {
+      "id":"sensores",
+      "name":"Zona de Sensores",
+      "components":[
+        "Sensor de huella dactilar (lateral)",
+        "Sensor de huella dactilar (bajo pantalla)",
+        "Sensor de proximidad",
+        "Acelerómetro",
+        "Giroscopio",
+        "Brújula / magnetómetro",
+        "Sensor de luz ambiental"
+      ]
+    },
+    {
+      "id":"conectividad-antenas",
+      "name":"Conectividad / Antenas",
+      "components":[
+        "Antena Wi-Fi / Bluetooth",
+        "Antena celular (4G/5G)",
+        "Módulo NFC",
+        "Módulo GPS",
+        "Chip baseband (comunicaciones)",
+        "Antena de carga inalámbrica"
+      ]
+    },
+    {
+      "id":"estructura-carcasa",
+      "name":"Estructura / Carcasa",
+      "components":[
+        "Carcasa trasera (vidrio)",
+        "Carcasa trasera (plástico / policarbonato)",
+        "Marco lateral (aluminio / titanio)",
+        "Cristal trasero",
+        "Bisagra (solo foldables)",
+        "Tapón de puerto / sellado"
+      ]
+    },
+    {
+      "id":"otros-modulos",
+      "name":"Otros Módulos",
+      "components":[
+        "Placa base (microsoldadura / reballing)",
+        "Módulo SIM / eSIM",
+        "Módulo de almacenamiento (UFS)",
+        "Módulo de RAM (solderada)",
+        "Cable flex de antena interna",
+        "Módulo de vibración (motor)"
+      ]
+    }
+  ]
+}   
