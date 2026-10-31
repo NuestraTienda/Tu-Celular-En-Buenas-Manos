@@ -1,14 +1,6 @@
-
----
-
-## `data.json`
-
-```json
 {
   "whatsapp_number": "5493468542942",
   "celulares": [
-    {"id":"iphone-18-pro-max","name":"iPhone 18 Pro Max","brand":"Apple"},
-    {"id":"iphone-18-pro","name":"iPhone 18 Pro","brand":"Apple"},
     {"id":"iphone-17e","name":"iPhone 17e","brand":"Apple"},
     {"id":"iphone-17-pro-max","name":"iPhone 17 Pro Max","brand":"Apple"},
     {"id":"iphone-17-pro","name":"iPhone 17 Pro","brand":"Apple"},
@@ -71,7 +63,6 @@
     {"id":"galaxy-a15","name":"Galaxy A15","brand":"Samsung"},
     {"id":"galaxy-a14","name":"Galaxy A14","brand":"Samsung"},
 
-    {"id":"xiaomi-17-ultra","name":"Xiaomi 17 Ultra","brand":"Xiaomi"},
     {"id":"xiaomi-15-pro","name":"Xiaomi 15 Pro","brand":"Xiaomi"},
     {"id":"xiaomi-15","name":"Xiaomi 15","brand":"Xiaomi"},
     {"id":"xiaomi-14-pro","name":"Xiaomi 14 Pro","brand":"Xiaomi"},
@@ -87,13 +78,10 @@
     {"id":"redmi-note-12-pro","name":"Redmi Note 12 Pro","brand":"Xiaomi"},
     {"id":"redmi-note-12","name":"Redmi Note 12","brand":"Xiaomi"},
 
-    {"id":"pixel-11-pro-xl","name":"Pixel 11 Pro XL","brand":"Google"},
-    {"id":"pixel-11-pro","name":"Pixel 11 Pro","brand":"Google"},
-    {"id":"pixel-11","name":"Pixel 11","brand":"Google"},
-    {"id":"pixel-10a","name":"Pixel 10a","brand":"Google"},
     {"id":"pixel-10-pro-xl","name":"Pixel 10 Pro XL","brand":"Google"},
     {"id":"pixel-10-pro","name":"Pixel 10 Pro","brand":"Google"},
     {"id":"pixel-10","name":"Pixel 10","brand":"Google"},
+    {"id":"pixel-10a","name":"Pixel 10a","brand":"Google"},
     {"id":"pixel-9-pro-xl","name":"Pixel 9 Pro XL","brand":"Google"},
     {"id":"pixel-9-pro","name":"Pixel 9 Pro","brand":"Google"},
     {"id":"pixel-9","name":"Pixel 9","brand":"Google"},
@@ -106,7 +94,6 @@
     {"id":"pixel-6-pro","name":"Pixel 6 Pro","brand":"Google"},
     {"id":"pixel-6","name":"Pixel 6","brand":"Google"},
 
-    {"id":"oneplus-15","name":"OnePlus 15","brand":"OnePlus"},
     {"id":"oneplus-13","name":"OnePlus 13","brand":"OnePlus"},
     {"id":"oneplus-12","name":"OnePlus 12","brand":"OnePlus"},
     {"id":"oneplus-11","name":"OnePlus 11","brand":"OnePlus"},
@@ -126,8 +113,8 @@
     {"id":"moto-g53","name":"Motorola G53","brand":"Motorola"},
     {"id":"moto-g34","name":"Motorola G34","brand":"Motorola"},
     {"id":"moto-g24","name":"Motorola G24","brand":"Motorola"},
-    {"id":"moto-razr-2026","name":"Motorola Razr 2026","brand":"Motorola"},
-    {"id":"moto-razr-plus-2026","name":"Motorola Razr Plus 2026","brand":"Motorola"},
+    {"id":"moto-razr-2025","name":"Motorola Razr 2025","brand":"Motorola"},
+    {"id":"moto-razr-plus-2025","name":"Motorola Razr Plus 2025","brand":"Motorola"},
 
     {"id":"nothing-phone-3","name":"Nothing Phone (3)","brand":"Nothing"},
     {"id":"nothing-phone-2","name":"Nothing Phone (2)","brand":"Nothing"},
@@ -154,113 +141,107 @@
   "categories": [
     {
       "id":"pantalla-display",
-      "name":"Pantalla / Display",
+      "name":"Zona de Pantalla / Display",
       "components":[
-        "Pantalla completa (display + touch)",
-        "Panel OLED / LCD",
-        "Vidrio frontal (lens)",
-        "Cable flex de pantalla",
-        "Conector de pantalla",
-        "Digitizador (solo touch)"
+        "Pantalla completa (LCD/OLED/AMOLED + digitizador)",
+        "Cristal de cubierta (cover glass)",
+        "Digitizador táctil",
+        "Retroiluminación (backlight)"
       ]
     },
     {
       "id":"carga-energia",
-      "name":"Carga / Energía",
+      "name":"Zona de Carga / Energía",
       "components":[
-        "Puerto de carga (USB-C / Lightning)",
         "Batería",
-        "Cable de carga interno",
-        "Circuito de carga (PMIC)",
-        "Inductor de carga inalámbrica",
-        "Botón de encendido (cable de carga)"
+        "Conector de carga (USB-C, Lightning, micro-USB)",
+        "Subplaca / placa de carga (charging board)",
+        "Bobina de carga inalámbrica",
+        "Flex de carga"
       ]
     },
     {
       "id":"botones-controles",
-      "name":"Botones / Controles",
+      "name":"Zona de Botones / Controles",
       "components":[
-        "Botón de encendido / Power",
-        "Botón de volumen arriba",
-        "Botón de volumen abajo",
-        "Botón lateral (Action / Mute)",
-        "Cable flex de botones",
-        "Botón de cámara (exterior)"
+        "Botón de encendido (power)",
+        "Botones de volumen",
+        "Botón de mute / switch lateral",
+        "Flex de botones"
       ]
     },
     {
       "id":"audio",
       "name":"Zona de Audio",
       "components":[
-        "Altavoz principal",
-        "Altavoz secundario (estéreo)",
-        "Auricular (earpiece)",
+        "Altavoz principal (speaker)",
+        "Auricular (earpiece / receiver)",
         "Micrófono principal",
-        "Micrófono secundario (reducción de ruido)",
-        "Cable flex de audio"
+        "Micrófono secundario (ANC)",
+        "Jack de auriculares (3.5 mm)"
       ]
     },
     {
       "id":"camaras",
       "name":"Zona de Cámaras",
       "components":[
-        "Cámara principal (traspera)",
+        "Cámara trasera principal",
         "Cámara ultra gran angular",
         "Cámara telefoto",
         "Cámara frontal (selfie)",
         "Flash LED",
-        "Lente de cámara (solo lente)",
-        "Cable flex de cámara"
+        "Lente de cámara (lens)"
       ]
     },
     {
       "id":"sensores",
       "name":"Zona de Sensores",
       "components":[
-        "Sensor de huella dactilar (lateral)",
-        "Sensor de huella dactilar (bajo pantalla)",
         "Sensor de proximidad",
+        "Sensor de luz ambiental",
         "Acelerómetro",
         "Giroscopio",
-        "Brújula / magnetómetro",
-        "Sensor de luz ambiental"
+        "Sensor de huella dactilar",
+        "Flex de sensores"
       ]
     },
     {
       "id":"conectividad-antenas",
-      "name":"Conectividad / Antenas",
+      "name":"Zona de Conectividad / Antenas",
       "components":[
-        "Antena Wi-Fi / Bluetooth",
-        "Antena celular (4G/5G)",
-        "Módulo NFC",
-        "Módulo GPS",
-        "Chip baseband (comunicaciones)",
-        "Antena de carga inalámbrica"
+        "Antena (WiFi, BT, celular)",
+        "Flex de antena",
+        "Bandeja / ranura SIM",
+        "Ranura microSD"
       ]
     },
     {
       "id":"estructura-carcasa",
       "name":"Estructura / Carcasa",
       "components":[
-        "Carcasa trasera (vidrio)",
-        "Carcasa trasera (plástico / policarbonato)",
-        "Marco lateral (aluminio / titanio)",
-        "Cristal trasero",
-        "Bisagra (solo foldables)",
-        "Tapón de puerto / sellado"
+        "Tapa trasera / cristal trasero",
+        "Marco / chasis",
+        "Tapas de batería",
+        "Tornillos",
+        "Adhesivos / cintas"
       ]
     },
     {
       "id":"otros-modulos",
       "name":"Otros Módulos",
       "components":[
-        "Placa base (microsoldadura / reballing)",
-        "Módulo SIM / eSIM",
-        "Módulo de almacenamiento (UFS)",
-        "Módulo de RAM (solderada)",
-        "Cable flex de antena interna",
-        "Módulo de vibración (motor)"
+        "Motor vibrador",
+        "Placa base",
+        "Placa hija",
+        "Flex cables",
+        "Blindajes"
       ]
     }
+  ],
+  "services": [
+    {"name":"Limpieza hardware (desarme, limpieza interna, rearmado)","price":"$25.000"},
+    {"name":"Limpieza software (optimización, borrar apps, liberar espacio)","price":"$20.000"},
+    {"name":"Hard reset / formateo + configuración","price":"$35.000"},
+    {"name":"Paquete completo (hardware + software)","price":"$45.000"}
   ]
 }   
